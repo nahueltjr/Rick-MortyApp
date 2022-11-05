@@ -1,0 +1,258 @@
+
+body{
+   background: rgb(9, 23, 29); 
+   color: #fff;  
+}
+.App{
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 5px;
+}
+form input{
+    width: 230px;
+    height: 30px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid rgba(187, 187, 187, 0.24);
+    margin-right: .2rem;
+    -webkit-box-shadow: 0px 0px 50px -7px rgba(55,255,5,1);
+-moz-box-shadow: 0px 0px 50px -7px rgba(55,255,5,1);
+box-shadow: 0px 0px 50px -7px rgba(55,255,5,1);
+}
+form button{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid rgba(187, 187, 187, 0.24);
+    border-radius:50%;
+    color: rgb(70, 188, 192);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.Header{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    background-image: url(./assets/rm.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.Location-container{
+    padding: 1rem;
+    text-align: center;
+}
+.Location{
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: .7rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.Location h2{
+    font-size: 1.4rem;
+    color: rgba(64,255,0,1);
+    margin-bottom: 1.4rem;
+    font-family: 'Creepster';
+}
+.Location ul{
+    display: flex;
+    justify-content: space-around;
+    color: rgb(156, 156, 156);
+}
+.Location ul span{
+    font-weight: 600;
+    font-size: .8rem;
+    color: #fff;
+}
+
+.ResidentsContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ResidentCard{
+    display: flex;
+    width: 240px;
+    height: 100px;
+    margin-bottom: 1rem;
+    background-color: rgba(107, 107, 107, 0.13);
+    border-radius: 10px;
+}
+.ResidentCard-profile{
+    position: relative;
+}
+.ResidentCard-profile img{
+    width: 100px;
+    border-radius:10px;
+}
+.ResidentCard-profile .circle{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    left: 18px;
+    bottom: 5px;
+    z-index: 1;
+}
+.Dead{
+    background-color: rgb(255, 0, 0);
+}
+.Alive{
+    background-color: rgb(21, 255, 0);
+}
+.unknown{
+    display: none;
+}
+.ResidentCard-profile span{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.651);
+    color: rgba(255, 255, 255, 0.712);
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    border-radius: 0 0 10px 10px;
+}
+.ResidentCard-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .3rem .4rem;
+    font-size: .7rem;
+    color: rgb(156, 156, 156);
+}
+.ResidentCard-section h3{
+    color: rgba(64,255,0,1);
+}
+.ResidentCard-section span{
+    font-weight: 600;
+    color: #fff;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+.page-num{
+    margin: 0 .5rem;
+    cursor: pointer;
+    transition: all .3s;
+    color: rgb(192, 192, 192);
+}
+.active{
+    color: rgba(64,255,0,1);
+    border: 1px solid;
+    padding: .2rem .5rem;
+    border-radius: 4px;
+}
+.page-num:hover{
+    color: rgba(64,255,0,1);
+}
+
+.SuggestedList{
+    position: absolute;
+    width: 230px;
+    top: 25px;
+    left: 0;
+    z-index: 2;
+    color: black;
+}
+.SuggestedList li{
+    padding: 0 .5rem;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+.SuggestedList li:hover{
+    color: rgb(47, 138, 16);
+}
+
+@media(min-width:420px){
+    
+    .ResidentCard{
+        width: 380px;
+        height: 160px
+    }
+    .ResidentCard-profile img{
+        width: 160px;
+        border-radius:10px;
+    }
+    .ResidentsContainer{
+        margin-bottom: 0;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(380px, 380px));
+        gap: 1.5rem;
+      }
+      .ResidentCard-section{
+        font-size: 1rem;
+        justify-content: space-around;
+    }
+    .ResidentCard-profile .circle{
+        left: 45px;
+    }
+
+    form{
+        margin-left: 2rem;
+    }
+    form input{
+        width: 400px;
+    }
+
+    .Location{
+        width: 500px;
+    }
+    .Location h2{
+        font-size: 1.6rem;
+    }
+
+    .Location,.Location ul span{
+        font-size: 1.2rem;
+    }
+    .SuggestedList{
+        width: 400px;
+    }
+
+    .page-num{
+        font-size: 1.2rem;
+    }
+}
+@media(min-width:991px){
+    .Header{
+        height: 350px;
+    }
+    form input{
+        height: 45px;
+    }
+    form button{
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+    .SuggestedList{
+        top: 35px;
+    }
+    .Location{
+        width: 900px;
+    }
+    .Location h2{
+        font-size: 2rem;
+    }
+    
+}
