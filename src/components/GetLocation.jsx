@@ -8,7 +8,7 @@ const GetLocation = ({data}) => {
             <ul>
                 <li><span>TYPE:</span> <br /> {data?.type}</li>
                 <li><span>DIMENSION:</span> <br /> {data?.dimension}</li>
-                <li><span>POPULATION:</span>  <br />{data.residents?.length}</li>
+                <li><span>HABITANTS:</span>  <br />{data.residents?.length}</li>
             </ul>
         </article>
     );
