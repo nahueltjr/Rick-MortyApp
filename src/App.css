@@ -20,18 +20,19 @@ form input{
     height: 30px;
     outline: none;
     border-radius: 5px;
-    border: 1px solid rgba(187, 187, 187, 0.24);
+    border: 2px solid rgb(70, 188, 192);
     margin-right: .2rem;
     -webkit-box-shadow: 0px 0px 50px -7px rgba(55,255,5,1);
--moz-box-shadow: 0px 0px 50px -7px rgba(55,255,5,1);
-box-shadow: 0px 0px 50px -7px rgba(55,255,5,1);
+    -moz-box-shadow: 0px 0px 50px -7px rgba(55,255,5,1);
+    box-shadow: 0px 0px 50px -7px rgba(55,255,5,1);
+    text-indent: .5rem;
 }
 form button{
     width: 30px;
     height: 30px;
     cursor: pointer;
     background-color: #fff;
-    border: 1px solid rgba(187, 187, 187, 0.24);
+    border: 2px solid rgb(70, 188, 192);
     border-radius:50%;
     color: rgb(70, 188, 192);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
@@ -58,21 +59,22 @@ form button{
 .Location{
     margin: 0 auto;
     padding: 1rem;
-    font-size: .7rem;
+    font-size: 1rem;
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
+    border-radius: 10px; 
 }
 .Location h2{
     font-size: 1.4rem;
     color: rgba(64,255,0,1);
     margin-bottom: 1.4rem;
     font-family: 'Creepster';
+    letter-spacing: 4px;
 }
 .Location ul{
-    display: flex;
-    justify-content: space-around;
-    color: rgb(156, 156, 156);
+    display: grid;
+    grid-template-columns: 30% auto 30%;
+    color: rgb(79, 211, 216);
 }
 .Location ul span{
     font-weight: 600;
@@ -87,17 +89,20 @@ form button{
 }
 .ResidentCard{
     display: flex;
-    width: 240px;
-    height: 100px;
+    width: 320px;
+    height: 130px;
     margin-bottom: 1rem;
-    background-color: rgba(107, 107, 107, 0.13);
+    background-color: rgba(68, 68, 68, 0.13);
     border-radius: 10px;
+    box-shadow: rgba(64,255,0,1) 0px 0px 4px 0px;
+
+    border: 1px solid rgba(64,255,0,1);
 }
 .ResidentCard-profile{
     position: relative;
 }
 .ResidentCard-profile img{
-    width: 100px;
+    width: 128px;
     border-radius:10px;
 }
 .ResidentCard-profile .circle{
@@ -132,10 +137,10 @@ form button{
 .ResidentCard-section{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: .3rem .4rem;
-    font-size: .7rem;
-    color: rgb(156, 156, 156);
+    font-size: .8rem;
+    color: rgb(185, 185, 185);
 }
 .ResidentCard-section h3{
     color: rgba(64,255,0,1);
@@ -171,7 +176,7 @@ form button{
     width: 230px;
     top: 25px;
     left: 0;
-    z-index: 2;
+    z-index: 99;
     color: black;
 }
 .SuggestedList li{
@@ -190,19 +195,18 @@ form button{
         height: 160px
     }
     .ResidentCard-profile img{
-        width: 160px;
+        width: 158px;
         border-radius:10px;
     }
     .ResidentsContainer{
         margin-bottom: 0;
         display: grid;
-        justify-content: center;
+        justify-content: space-evenly;
         grid-template-columns: repeat(auto-fit, minmax(380px, 380px));
         gap: 1.5rem;
       }
       .ResidentCard-section{
         font-size: 1rem;
-        justify-content: space-around;
     }
     .ResidentCard-profile .circle{
         left: 45px;

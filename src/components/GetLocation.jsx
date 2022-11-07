@@ -6,9 +6,9 @@ const GetLocation = ({data}) => {
         <article className='Location'>
             <h2>" {data?.name} "</h2>
             <ul>
-                <li><span>Type:</span> <br /> {data?.type}</li>
-                <li><span>Dimension:</span> <br /> {data?.dimension}</li>
-                <li><span>Population:</span>  <br />{data.residents?.length}</li>
+                <li><span>TYPE:</span> <br /> {data?.type}</li>
+                <li><span>DIMENSION:</span> <br /> {data?.dimension}</li>
+                <li><span>POPULATION:</span>  <br />{data.residents?.length}</li>
             </ul>
         </article>
     );
