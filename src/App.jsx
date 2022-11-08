@@ -64,7 +64,7 @@ function App() {
               }, 100);
             }}
             />
-            <motion.button whileTap={{ scale: 0.9 }} whileHover={{ scale: 1.1 }}><i className="fa-solid fa-magnifying-glass"></i></motion.button>
+            <motion.button whileTap={{ scale: 0.9 }}><i className="fa-solid fa-magnifying-glass"></i></motion.button>
             <FilterList suggestList={suggestList} setSearchInput={setSearchInput}/>
         </form>
       </div>
