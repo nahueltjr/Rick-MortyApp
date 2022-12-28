@@ -14,7 +14,7 @@ const GetResidents = ({url}) => {
 
     return (
         <motion.article className='ResidentCard'
-        whileHover={{scale:1.2}}
+        whileHover={{scale:1.04}}
         transition={{ type: "tween"}}
         >   
             <header className='ResidentCard-profile'>

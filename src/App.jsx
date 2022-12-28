@@ -68,11 +68,12 @@ function App() {
             <FilterList suggestList={suggestList} setSearchInput={setSearchInput}/>
         </form>
       </div>
-
-      <div className='Location-container'>
-        <GetLocation data={data}/>
-      </div>
-      
+      {
+        !hasError &&
+          <div className='Location-container'>
+            <GetLocation data={data}/>
+          </div>
+      }
       <div className='ResidentsContainer'>
           {
             hasError ?
@@ -86,24 +87,26 @@ function App() {
             ))
           }
        </div>
+       {
+          !hasError &&
+            <ReactPaginate
+                    containerClassName={"pagination"}
+                    pageRangeDisplayed={3}
+                    activeLinkClassName={"active"}
+                    pageLinkClassName={"page-num"}
 
-        <ReactPaginate
-                containerClassName={"pagination"}
-                pageRangeDisplayed={3}
-                activeLinkClassName={"active"}
-                pageLinkClassName={"page-num"}
+                    previousLabel={"<<"}
+                    previousClassName={"page-num"}
 
-                previousLabel={"<<"}
-                previousClassName={"page-num"}
+                    pageCount={pageCount}
+                    onPageChange={changePage}
 
-                pageCount={pageCount}
-                onPageChange={changePage}
+                    nextLabel={">>"}
+                    nextLinkClassName={"page-num"}
 
-                nextLabel={">>"}
-                nextLinkClassName={"page-num"}
-
-                renderOnZeroPageCount={null}
+                    renderOnZeroPageCount={null}
             />
+          }
     </div>
   )
 }

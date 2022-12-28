@@ -98,7 +98,6 @@ form button{
     background: linear-gradient(90deg, #031929ab 30%, #010c14b4 100%);
     border-radius: 10px;
     box-shadow: #37d403 0px 0px 3px 0px;
-    cursor: pointer;
     border: 1px solid #37d403;
 }
 .ResidentCard-profile{
